@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Reservation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 60%;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hotel Reservation</h1>
+    <form action="submit_reservation.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="check-in">Check-In Date:</label>
+        <input type="date" id="check-in" name="check_in_date" required>
+
+        <label for="check-out">Check-Out Date:</label>
+        <input type="date" id="check-out" name="check_out_date" required>
+
+        <label for="room-type">Room Type:</label>
+        <select id="room-type" name="room_type" required>
+            <option value="standard">Standard Room</option>
+            <option value="deluxe">Deluxe Room</option>
+            <option value="suite">Suite</option>
+        </select>
+
+        <label for="special-requests">Special Requests:</label>
+        <textarea id="special-requests" name="special_requests" rows="4"></textarea>
+
+        <input type="submit" value="Book Now">
+    </form>
+</body>
+</html>
